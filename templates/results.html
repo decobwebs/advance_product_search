@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>ComCheck</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="static/css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="static/css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="static/images/fevicon.png" type="image/gif" />
+      <!-- font css -->
+      <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="static/css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   </head>
+   <body>
+      <div class="header_section">
+         <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <div class="row">
+               <div class="col-md-12">
+                  <h1 class="pricing_taital"">ComCheck</h1>
+               </div>
+            </div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+
+            </nav>
+         </div>
+         <!-- banner section start -->
+         <div class="banner_section layout_padding">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-6">
+   <h1 class="banner_taital">FIND ANY PRODUCT <span style="color: #2b2b2b;">WITH EASE</span></h1>
+   <p class="banner_text">
+      Looking for a product? Our platform helps you search and instantly gathers data from multiple sources to provide you with the best results. Explore how it works or watch a quick demo!
+   </p>
+
+   <!-- "Read More" section -->
+   <div class="started_text">
+      <a href="https://www.comcheckwebsite.com/how-it-works" target="_blank" rel="noopener noreferrer">Read More</a>
+   </div>
+
+   <!-- "Play Video" section -->
+   <div class="play_icon">
+      <a href="https://www.comcheckwebsite.com/watch-demo" target="_blank" aria-label="Play Demo Video">
+         <img src="static/images/play-icon.png" alt="Play Demo Video">
+      </a>
+   </div>
+</div>
+
+                  <div class="col-md-6">
+                     <div id="banner_slider" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                           <div class="carousel-item active">
+                              <div class="banner_img"><img src="static/images/banner-img.png"></div>
+                           </div>
+                           <div class="carousel-item">
+                              <div class="banner_img"><img src="static/images/banner-img.png"></div>
+                           </div>
+                           <div class="carousel-item">
+                              <div class="banner_img"><img src="static/images/banner-img.png"></div>
+                           </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#banner_slider" role="button" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a class="carousel-control-next" href="#banner_slider" role="button" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- banner section end -->
+
+         <
+      <!-- services section end -->
+      <!-- shop section start -->
+      <div class="container">
+    <h1 class="text-center mb-4">Search Results for {{ product_name }}</h1>
+
+    <!-- Product Grid -->
+    <!-- Add this in result.html -->
+
+    <!-- Style Section -->
+    <style>
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 250px; /* Adjust this to fit the tallest product image */
+            overflow: hidden;
+        }
+
+        .image-container img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .product-info {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .view-link {
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .view-link:hover {
+            background-color: #0056b3;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Ensures products are centered in the row */
+            gap: 20px; /* Adds spacing between cards */
+        }
+
+        .col-lg-3,
+        .col-md-4,
+        .col-sm-6 {
+            display: flex;
+            justify-content: center;
+        }
+
+
+        /* Pagination */
+        .pagination {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .pagination-link {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 8px 15px;
+            text-decoration: none;
+            background-color: #ecf0f1;
+            color: #34495e;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .pagination-link:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        .pagination-link.active {
+            background-color: #27ae60;
+            color: #fff;
+        }
+    </style>
+
+    <!-- Product Grid -->
+    <!-- Loop through all products -->
+<div class="product-grid">
+            {% for product in products %}
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="{{ product.image }}" alt="{{ product.name }}" onclick="viewImage('{{ product.image }}')">
+                </div>
+                <div class="product-info">
+                    <h3>{{ product.name }}</h3>
+                    <p>Price: {{ product.price }}</p>
+                    <a href="{{ product.url }}" target="_blank" class="view-link">View Product</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="pagination">
+            {% if page > 1 %}
+            <a href="/results?product_name={{ product_name }}&price_filter={{ price_filter }}&price_value={{ price_value }}&search_type={{ search_type }}&page={{ page - 1 }}" class="pagination-link">Previous</a>
+            {% endif %}
+
+            {% for p in range(1, total_pages + 1) %}
+            <a href="/results?product_name={{ product_name }}&price_filter={{ price_filter }}&price_value={{ price_value }}&search_type={{ search_type }}&page={{ p }}"
+               class="pagination-link {% if p == page %}active{% endif %}">{{ p }}</a>
+            {% endfor %}
+
+            {% if page < total_pages %}
+            <a href="/results?product_name={{ product_name }}&price_filter={{ price_filter }}&price_value={{ price_value }}&search_type={{ search_type }}&page={{ page + 1 }}" class="pagination-link">Next</a>
+            {% endif %}
+        </div>
+    </div>
+
+
+
+    <!-- Footer Spacing -->
+    <div style="margin-top: 60px;"></div>
+</div>
+
+<!-- Modal for Enlarged Image -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<script>
+    // Open modal to view image
+    function viewImage(imageSrc) {
+        document.getElementById('modalImage').src = imageSrc;
+        document.getElementById('imageModal').style.display = 'block';
+    }
+
+    // Close modal
+    function closeModal() {
+        document.getElementById('imageModal').style.display = 'none';
+    }
+</script>
+
+
+
+
+
+
+      <!-- contact section end -->
+      <!-- footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1 class="pricing_taital" style="color: white;">ComCheck</h1>
+               </div>
+            </div>
+            <div class="footer_section_2">
+
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">Portfolio</h2>
+                     <div class="footer_menu">
+                        <ul>
+                           <li><a href="https://sadiq-idris-portfolio.onrender.com">Portfolio</a></li>
+                           <li><a href="https://hajj-textiles.onrender.com">E-Commerce</a></li>
+                           <li><a href="https://hotel-project-yvov.onrender.com">Hotel</a></li>
+                           <li><a href="https://qr-code-generator-e6n4.onrender.com">QR Generator</a></li>
+                           <li><a href="https://afssltd.onrender.com">Company Website</a></li>
+                           <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                     </div>
+                  </div>
+
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">2025 All Rights Reserved. Design by <a href="https://sadiq-idris-portfolio.onrender.com">Cobweb</a></p>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="static/js/jquery.min.js"></script>
+      <script src="static/js/popper.min.js"></script>
+      <script src="static/js/bootstrap.bundle.min.js"></script>
+      <script src="static/js/jquery-3.0.0.min.js"></script>
+      <script src="static/js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="static/js/custom.js"></script>
+      <!-- javascript -->
+      <script>
+         // Material Select Initialization
+         $(document).ready(function() {
+         $('.mdb-select').materialSelect();
+         $('.select-wrapper.md-form.md-outline input.select-dropdown').bind('focus blur', function () {
+         $(this).closest('.select-outline').find('label').toggleClass('active');
+         $(this).closest('.select-outline').find('.caret').toggleClass('active');
+         });
+         });
+      </script>
+   </body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Search Form</title>
+    <style>
+        /* Core Body Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Header Styling */
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ff6a95;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Descriptive Paragraph Styling */
+        .description-text {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            text-align: center;
+            max-width: 800px;
+            margin: 20px;
+        }
+
+        /* Step-by-Step List Styling */
+        .description-list {
+            text-align: left;
+            max-width: 800px;
+            margin: 30px auto;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .description-list li {
+            margin-bottom: 15px;
+        }
+
+        .description-list li::before {
+            content: "👉 ";
+            color: #ff6a95;
+            font-size: 1.4rem;
+        }
+
+        /* Button Styling */
+        .start-btn {
+            padding: 14px 25px;
+            font-size: 1.2rem;
+            background: linear-gradient(135deg, #ff6a95, #f94367);
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 30px;
+        }
+
+        .start-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 106, 149, 0.4);
+        }
+
+        .start-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Form Styling */
+        .form-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            position: relative;
+            width: 450px;
+            max-width: 90%;
+            margin-top: 40px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-size: 1rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            padding: 12px 16px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        button {
+            padding: 14px;
+            font-size: 1.2rem;
+            background: linear-gradient(135deg, #ff6a95, #f94367);
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 106, 149, 0.4);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Description Section -->
+    <h1>Welcome to the Ultimate Product Search!</h1>
+    <p class="description-text">
+        Looking for the best deals? Our tool will help you search for the products you want from multiple e-commerce platforms such as Jumia, Temu, and Konga. Filter by price, choose the depth of your search, and find exactly what you're looking for with just a few clicks.
+    </p>
+    <ul class="description-list">
+        <li><strong>Step 1:</strong> Enter the name of the product you want to search (e.g., <em>JBL Headphones</em>).</li>
+        <li><strong>Step 2:</strong> Use the "Price Filter" to limit results above or below a certain price.</li>
+        <li><strong>Step 3:</strong> Choose a search type:
+            <ul>
+                <li><strong>Simple Search:</strong> Searches Jumia for quick results.</li>
+                <li><strong>Deep Search:</strong> Searches across Jumia, Temu, and Konga for a wider selection.</li>
+            </ul>
+        </li>
+        <li><strong>Step 4:</strong> Hit the "Search" button and let the results come to you!</li>
+    </ul>
+
+    <button class="start-btn" onclick="window.location.href='/'">Start Searching</button>
+
+    <!-- Form for Product Search -->
+    <div class="form-container">
+        <h2>Search for Products</h2>
+        <form method="post" action="/">
+
+            <div class="form-group">
+                <label for="product_name">Search for a product:</label>
+                <input type="text" id="product_name" name="product_name" required placeholder="e.g., JBL Headphones">
+            </div>
+
+            <div class="form-group">
+                <label for="price_filter">Price Filter:</label>
+                <select id="price_filter" name="price_filter">
+                    <option value="">No Filter</option>
+                    <option value="above">Above</option>
+                    <option value="below">Below</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="price_value">Price Value:</label>
+                <input type="number" id="price_value" name="price_value" placeholder="Enter price (e.g., 100)">
+            </div>
+
+            <div class="form-group">
+                <label for="search_type">Search Type:</label>
+                <select id="search_type" name="search_type">
+                    <option value="simple">Simple</option>
+                    <option value="deep">Deep</option>
+                </select>
+            </div>
+
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+</body>
+</html>
